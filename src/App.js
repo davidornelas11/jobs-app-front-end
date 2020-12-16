@@ -2,14 +2,8 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 import Form from './components/Form'
-
-// const iterateOverstates = (data) => {
-//   const list = []
-//   for (let i in data){
-//     list.push(i)
-//   }
-//   return list
-// }
+import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 export default class App extends Component {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
+import Button from '@material-ui/core/Button';
 
 const iterateOverStates = (data) => {
     let list = []
@@ -10,18 +11,10 @@ const iterateOverStates = (data) => {
     return list
   }
 
-function checkLanguage(data){
-    if (data === ''){
-       return console.log('it is empty')
-    }
-    console.log(data)
-}
-
-
 
 function random_rgba() {
     var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ',' + 1 + ')';
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s)  + ')';
 }
 
 
@@ -37,7 +30,7 @@ class Chart extends Component {
                     {
                         label: '',
                         data: [],
-                        backgroundColor: 'red'
+                        backgroundColor: ''
                         ,
                         borderColor: [
                             "rgba(255, 99, 132, 1)",
@@ -47,7 +40,7 @@ class Chart extends Component {
                             "rgba(153, 102, 255, 1)",
                             "rgba(255, 159, 64, 1)",
                         ],
-                        hoverBackgroundColor: 'green',
+                        hoverBackgroundColor: '',
                         barThickness: "flex"
                     }
                 ]
@@ -66,12 +59,13 @@ class Chart extends Component {
         for (let i in allStates){
             dataForChart.push(allStates[i][data])
         }
-        console.log(dataForChart)
         let newAllStates = this.state.chartData
         newAllStates.datasets[0].data = dataForChart
         this.setState({newAllStates})
-
-        // this.setState({})
+        let newColor = this.state.chartData.datasets[0]
+        newColor.backgroundColor = random_rgba()
+        newColor.hoverBackgroundColor = random_rgba()
+        this.setState({newColor})
         
     }
 
@@ -101,14 +95,14 @@ class Chart extends Component {
                         data={this.state.chartData}
                         options={{
                             maintainAspectRatio: true,
-                            title: { display: true, text: "Jobs available by state" },
+                            title: { display: true, text: `${(this.props.language).toUpperCase()} JOBS AVAILABLE` },
                             legend: {
                                 display: true,
                                 position: "bottom",
                             },
                         }}
                     />
-                    <button onDoubleClick={() => this.applyLanguageData(this.props.language)}>current language</button>
+                    <Button variant='contained' color='primary' onClick={() => this.applyLanguageData(this.props.language)}>Generate new chart</Button>
                 </div>
                 
             </>
