@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Picture of website](https://imgur.com/KVPvnqN)
+![Picture of website](https://i.imgur.com/KVPvnqN.png)
 
 
 Why I made this project:
