@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -40,7 +40,7 @@ export default function Form() {
 
   return (
     <>
-    <Chart language={language} />
+    <Chart language={language}/>
     <div>
       <Button className={classes.button} onClick={handleOpen}>
         select language

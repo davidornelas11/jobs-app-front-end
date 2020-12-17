@@ -14,7 +14,7 @@ const iterateOverStates = (data) => {
 
 function random_rgba() {
     var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s)  + ')';
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s)  + ',' + .8 + ')';
 }
 
 
@@ -27,7 +27,9 @@ class Chart extends Component {
             chartData: {
                 labels: [],
                 datasets: [
-                    {
+                    {   
+                        hoverBorderColor: 'yellow',
+                        hoverBorderWidth: 1.5,
                         label: '',
                         data: [],
                         backgroundColor: ''
@@ -61,6 +63,7 @@ class Chart extends Component {
         }
         let newAllStates = this.state.chartData
         newAllStates.datasets[0].data = dataForChart
+        newAllStates.datasets[0].label = this.props.language.toUpperCase()
         this.setState({newAllStates})
         let newColor = this.state.chartData.datasets[0]
         newColor.backgroundColor = random_rgba()
@@ -90,7 +93,7 @@ class Chart extends Component {
     render() {
         return (
             <>
-                <div className="chart-container" style={{ width: "150vh" }}>
+                <div className="chart-container" style={{ width: "170vh" }}>
                     <Bar
                         data={this.state.chartData}
                         options={{
@@ -98,11 +101,11 @@ class Chart extends Component {
                             title: { display: true, text: `${(this.props.language).toUpperCase()} JOBS AVAILABLE` },
                             legend: {
                                 display: true,
-                                position: "bottom",
+                                position: "right",
                             },
                         }}
                     />
-                    <Button variant='contained' color='primary' onClick={() => this.applyLanguageData(this.props.language)}>Generate new chart</Button>
+                    <Button variant='contained' color='secondary' onClick={() => this.applyLanguageData(this.props.language)}>Generate new chart</Button>
                 </div>
                 
             </>

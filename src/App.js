@@ -1,34 +1,34 @@
 import React, { Component } from 'react'
 import Navbar from './components/Navbar'
-import axios from 'axios'
 import Form from './components/Form'
-import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularIndeterminate from './components/CircularIntermediate'
+import Box from '@material-ui/core/Box'
+import Footer from './components/Footer'
+
+const DateExtracted = () => (
+  <Box display="flex" flexDirection="column" alignItems="center" padding={1} margin={1}>
+    <small><i>*Data was extracted 12/18/2020*</i></small>
+  </Box>
+)
 
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      chartData: {}
+      load: true
     }
   }
 
-  
-
-  getChartData(){
-    this.setState({
-      chartData:{}
-    })
-  }
 
   
   render() {
     return (
       <div className='App'>
         <Navbar />
-
+        <DateExtracted />
         <Form />
+      <Footer />
       </div>
     )
   }

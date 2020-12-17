@@ -7,11 +7,8 @@ import Button from '@material-ui/core/Button';
 import SideDrawer from './SideDrawer';
 
 const navLinks = [
-    { title: `about us`, path: `/about-us` },
-    { title: `product`, path: `/product` },
-    { title: `blog`, path: `/blog` },
-    { title: `contact`, path: `/contact` },
-    { title: `faq`, path: `/faq` }
+    { title: `Search Indeed`, path: `https://www.indeed.com/jobs?q=&l=`},
+    { title: `Search Glassdoor`, path: `https://www.glassdoor.com/`}
   ];
 
 const useStyles = makeStyles((theme) => ({
@@ -31,14 +28,11 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar style={{ background: '#2196f3' }} position="static">
         <Toolbar>
-          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"> */}
-            {/* <MenuIcon />
-          </IconButton> */}
           <SideDrawer navLinks={navLinks} />
           <Typography variant="h6" className={classes.title}>
-            
+            Useful Links
           </Typography>
           <Button color="inherit"></Button>
         </Toolbar>
