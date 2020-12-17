@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import Form from './components/Form'
-import CircularIndeterminate from './components/CircularIntermediate'
 import Box from '@material-ui/core/Box'
 import Footer from './components/Footer'
 
