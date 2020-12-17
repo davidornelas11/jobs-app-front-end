@@ -2,10 +2,10 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/davidornelas11/web-scraper-for-job-postings/tree/master"><strong>Web Scraper repo</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="#">View Demo</a>
     ·
     <a href="https://github.com/davidornelas11/flask-jobs-api/tree/cors-tester">Backend Repo</a>
 </p>
