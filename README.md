@@ -4,7 +4,7 @@
     <a href="https://github.com/davidornelas11/web-scraper-for-job-postings/tree/master"><strong>Web Scraper repo</strong></a>
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://programming-jobs-available.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/davidornelas11/flask-jobs-api/tree/cors-tester">Backend Repo</a>
 </p>
