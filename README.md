@@ -1,6 +1,5 @@
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
     <br />
     <a href="https://github.com/davidornelas11/web-scraper-for-job-postings/tree/master"><strong>Web Scraper repo</strong></a>
     <br />
