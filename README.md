@@ -32,6 +32,7 @@ Why I made this project:
 * [SQL Alchemy](https://www.sqlalchemy.org/)
 * [Charts.js](https://www.chartjs.org/docs/latest/)
 * [React](https://reactjs.org/)
+*D3 JS
 
 
 
